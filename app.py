@@ -3,6 +3,7 @@ import logging
 import math
 import ipaddress
 import socket
+import sys
 import threading
 import time
 import urllib.parse
@@ -13,13 +14,16 @@ from pairing import Registrations
 from flask import Flask, jsonify, make_response, render_template, request
 from flask_sock import Sock
 
-app = Flask(__name__)
+RESOURCE_ROOT = Path(__file__).resolve().parent
+DATA_ROOT = Path(sys.executable).resolve().parent if getattr(sys, 'frozen', False) else RESOURCE_ROOT
+app = Flask(__name__, template_folder=str(RESOURCE_ROOT / 'templates'),
+            static_folder=str(RESOURCE_ROOT / 'static'))
 app.config['MAX_CONTENT_LENGTH'] = 3_000_000
 app.config['SOCK_SERVER_OPTIONS'] = {'ping_interval': 20, 'max_message_size': 3_000_000}
 sock = Sock(app)
 CODE = f"{secrets.randbelow(1_000_000):06d}"
 attempts = {}
-registrations = Registrations(Path(__file__).resolve().parent / '.state' / 'registrations.json')
+registrations = Registrations(DATA_ROOT / '.state' / 'registrations.json')
 lock = threading.RLock()
 frame_ready = threading.Condition(lock)
 queue = deque()

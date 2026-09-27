@@ -10,6 +10,7 @@ A local-network remote for Chrome, focused on YouTube volume while gaming. Uses 
 
 - **[日本語の詳しい説明書](docs/USER_GUIDE_JA.md)**
 - **[Detailed English user guide](docs/USER_GUIDE_EN.md)**
+- **[Python不要のWindows版 / Windows edition without Python](docs/PORTABLE_JA.md)** · [English](docs/PORTABLE_EN.md)
 - [Security and privacy / セキュリティ](SECURITY.md)
 - [Release checklist / 公開前チェック](docs/RELEASE_CHECKLIST.md)
 
@@ -25,9 +26,9 @@ A local-network remote for Chrome, focused on YouTube volume while gaming. Uses 
 
 ## Requirements / 動作要件
 
-Windows 10/11, Chrome 116 or newer (current stable recommended), Python 3.10+, phone browser, trusted home LAN. PC Ethernet + phone Wi-Fi also works when the router allows communication. Initial installation requires internet access.
+Windows 10/11, Chrome 116 or newer (current stable recommended), phone browser, trusted home LAN. The source ZIP requires Python 3.10+ and internet access for initial installation. The Windows portable ZIP bundles Python and dependencies, so end users do not install Python or pip. PC Ethernet + phone Wi-Fi also works when the router allows communication.
 
-This is a **beta source distribution**, not a signed Windows installer. First-time setup requires manually loading the unpacked extension. Detailed steps are in the guides. macOS/Linux support is not claimed.
+This is an unsigned **beta**, not a Windows installer. The portable ZIP is built on Windows in GitHub Actions; download the verified Windows artifact or release asset, extract it and run `ChromePhoneRemote.exe`. First-time setup still requires manually loading the unpacked extension. Detailed steps are in the guides. macOS/Linux support is not claimed.
 
 ## Limits / 制限
 

@@ -1,6 +1,6 @@
 # Third-party components
 
-The source ZIP does not bundle a Python runtime, Chrome, downloaded packages, media, fonts or third-party logos. Dependencies are downloaded separately by pip and retain their upstream license notices. Do not remove those notices if distributing an executable or bundled environment later.
+The source ZIP does not bundle a Python runtime, Chrome, downloaded packages, media, fonts or third-party logos. The Windows portable ZIP bundles a Python runtime and installed packages. Its `THIRD_PARTY_LICENSES` directory contains the license files found in the build environment, including the Python license. Keep that directory and this notice when redistributing the Windows ZIP. Chrome, media, fonts and third-party logos are not bundled.
 
 | Component | Upstream | License family |
 |---|---|---|

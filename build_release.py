@@ -4,6 +4,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent
 FILES = ['pairing.py', 'app.py', 'bootstrap.py', 'start.bat', 'requirements.txt', 'requirements-dev.txt',
+         'requirements-build.txt', 'build_windows.py', 'smoke_windows.py',
          'README.md', 'LICENSE', 'SECURITY.md', 'THIRD_PARTY_NOTICES.md', 'CHANGELOG.md',
          'CONTRIBUTING.md', '.gitignore', 'build_release.py']
 FOLDERS = ['docs', 'extension', 'static', 'templates', 'tests', '.github']
