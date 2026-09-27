@@ -10,7 +10,7 @@ This package is prepared for a public **beta source release**. It has not been u
 - [ ] Commit only the source tree. Never copy `.venv`, `chrome-profile`, cookies, tokens or logs.
 - [ ] Run automated checks and resolve failures.
 - [ ] Run `python build_release.py`; use the generated allowlisted source ZIP.
-- [ ] Describe the release as beta; state Python and manual extension setup requirements.
+- [ ] Describe the release as beta; state that the source ZIP needs Python, while the Windows ZIP bundles it. Both need manual Chrome extension setup.
 - [ ] Do not advertise a signed executable, Web Store approval, security audit, fixed FPS or anti-cheat certification.
 
 ## Manual device checks before promoting out of beta
@@ -29,4 +29,4 @@ Automated server/request checks, JavaScript parsing and local WebSocket relay ca
 
 ## 日本語補足
 
-README・説明書・ライセンス・CI・ZIP作成スクリプトを同梱しています。公開そのものは未実施です。まずベータ版として配布し、上の実機チェックを実施した機種だけ動作確認済みとしてください。実行ファイル化する場合は、依存ライセンス同梱、コード署名、配布物の検査を別途行う必要があります。
+README・説明書・ライセンス・CI・ZIP作成スクリプトを同梱しています。リポジトリは公開済みです。Windows版を配布するときは、Windows CIの実行ファイル起動確認とライセンス同梱を確認し、実機チェックを実施した機種だけ動作確認済みとしてください。Windows版は未署名です。ZIPのハッシュを公開し、可能ならコード署名と配布物の検査も行ってください。
