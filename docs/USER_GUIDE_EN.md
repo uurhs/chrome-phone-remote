@@ -2,6 +2,8 @@
 
 Chrome Phone Remote 0.4.1 beta
 
+**Want to skip installing Python?** Use the [Windows portable guide](PORTABLE_EN.md). The steps below are for the source ZIP.
+
 ## 1. What does this do?
 
 Control a YouTube video in your PC's Chrome from your phone while a game stays in front. Your phone only needs a browser. Setup happens on your PC.
