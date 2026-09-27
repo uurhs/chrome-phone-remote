@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+chrome-profile/
+*.log
+.env
+.env.*
+*.zip
+dist/
+.DS_Store
+Thumbs.db
+
+.state/

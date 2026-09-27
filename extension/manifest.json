@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Phone Remote Bridge",
+  "version": "0.4.1",
+  "description": "Connect existing Chrome tabs to the local phone remote server.",
+  "permissions": ["debugger", "tabs", "storage", "alarms"],
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "background": {"service_worker": "worker.js"},
+  "action": {"default_popup": "popup.html", "default_title": "Phone Remote"},
+  "minimum_chrome_version": "116"
+}
